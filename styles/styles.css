@@ -1,57 +1,145 @@
-* {
+/* Reset */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
+
+/* Variables */
 :root {
   --primary-color: #0cbbc7;
   --secondary-color: #191619;
   --back-color: #edfeff;
+  --universal-color: #ffffff;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Plus Jakarta Sans", sans-serif;
-}
-
+/* Base */
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 1.6;
+  color: var(--secondary-color);
 }
-.btn {
-  padding: 10px 50px;
-  width: 140px;
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
-}
+
+/* Container */
 .container {
   max-width: 1320px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
-.header {
-  background-color: #edfeff;
+/* Button */
+.btn {
+  padding: 10px 40px;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: 0.3s;
 }
+
+/* .btn:hover {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+} */
+
+/* Header */
+.header {
+  background-color: var(--universal-color);
+}
+
+/* NAV */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 15px 0px;
 }
 
-ul {
+/* UL reset + flex */
+.nav-list ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
   list-style: none;
-  text-decoration: none;
+  gap: 40px;
+  align-items: center;
 }
 
-ul li > a {
+/* Links */
+.nav-list a {
   text-decoration: none;
   color: var(--secondary-color);
+  transition: 0.3s;
+}
+
+.nav-list a:hover {
+  color: var(--primary-color);
+}
+
+/* Logo */
+/* .logo img {
+  height: 50px;
+} */
+
+/* css for hero sections */
+.hero-section {
+  background-image: linear-gradient(
+    to bottom,
+    var(--back-color) 90%,
+    var(--universal-color) 10%
+  );
+}
+
+.hero-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 44px;
+  width: 780px;
+
+  line-height: 55px;
+  padding-top: 50px;
+}
+.hero-content p {
+  font-size: 14px;
+  width: 440px;
+
+  color: #878787;
+  margin-top: 20px;
+}
+
+.hero-section a {
+  background-color: var(--primary-color);
+  color: var(--universal-color);
+  padding: 14px 20px;
+  margin: 30px 0px 56px 0px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.hero-section a::after {
+  content: "\02C3";
+  padding-left: 8px;
+}
+
+.hero-section img {
+  width: 960px;
+  margin-bottom: -70px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-list ul {
+    gap: 20px;
+  }
 }
