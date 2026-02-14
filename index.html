@@ -3,49 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eco Green Website</title>
+    <meta
+      name="description"
+      content="A powerful online engagement tool that's intuitive and simple to use. Trusted by 100,000+ customers in 90+ countries."
+    />
+    <title>Circle - Powerful Online Engagement Tool</title>
 
-    <link rel="stylesheet" href="styles/styles.css" />
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
-    <section class="header">
-      <div class="main-nav container">
-        <nav>
-          <div class="nav-list">
+    <!-- Header & Navigation -->
+    <header class="header">
+      <div class="container">
+        <nav class="main-nav">
+          <!-- Left Navigation -->
+          <div class="nav-list nav-left">
             <ul>
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Testimonial</a></li>
-              <li><a href="#">Resources</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#testimonial">Testimonial</a></li>
+              <li><a href="#resources">Resources</a></li>
             </ul>
           </div>
 
+          <!-- Logo -->
           <div class="logo">
-            <img src="images/circle logo.png" alt="Logo" />
+            <a href="/" aria-label="Circle Home">
+              <img src="images/circle logo.png" alt="Circle Logo" />
+            </a>
           </div>
 
-          <div class="nav-list">
+          <!-- Right Navigation -->
+          <div class="nav-list nav-right">
             <ul>
-              <li><a href="#">Company</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#" id="secondary-btn" class="btn">Login</a></li>
+              <li><a href="#company">Company</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#login" class="btn btn-outline">Login</a></li>
             </ul>
           </div>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </nav>
       </div>
-    </section>
+    </header>
 
-    <!-- end of the Nav sections -->
-    <!-- ***********Start of the hero section -->
+    <!-- Hero Section -->
     <section class="hero-section">
       <div class="container">
         <div class="hero-content">
           <h1>
-            A powerful online engagement tool that’s intuitive and simple to
+            A powerful online engagement tool that's intuitive and simple to
             use.
           </h1>
 
@@ -53,11 +76,99 @@
             With stellar one-click reports and unmatched support, see how Circle
             will make a difference in your business.
           </p>
-          <a href="#" class="button">Get started free</a>
 
-          <img src="images/hero-image.png" alt="" />
+          <a href="#signup" class="btn btn-primary">Get started free</a>
+
+          <div class="hero-image">
+            <img
+              src="images/hero-image.png"
+              alt="Circle Platform Dashboard Preview"
+            />
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- Customers Section -->
+    <section class="our-customers">
+      <div class="container">
+        <div class="customers-content">
+          <span class="section-label">Our Customers</span>
+
+          <h2 class="section-title">
+            Trusted by <span class="highlight">100,000+ customers</span> in 90+
+            countries
+          </h2>
+
+          <div class="customers-logos">
+            <div class="logo-item">
+              <img src="images/biocon.png" alt="Biocon" />
+            </div>
+            <div class="logo-item">
+              <img src="images/shell.png" alt="Shell" />
+            </div>
+            <div class="logo-item">
+              <img src="images/dell.png" alt="Dell" />
+            </div>
+            <div class="logo-item">
+              <img src="images/CK birla.png" alt="CK Birla" />
+            </div>
+            <div class="logo-item">
+              <img src="images/capgemini.png" alt="Capgemini" />
+            </div>
+            <div class="logo-item">
+              <img src="images/Yamaha.png" alt="Yamaha" />
+            </div>
+          </div>
+
+          <div class="trust-indicators">
+            <ul>
+              <li>
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"
+                  />
+                </svg>
+                18,281 signed up last month
+              </li>
+              <li>
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"
+                  />
+                </svg>
+                GDPR- & CCPA-ready
+              </li>
+              <li>
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                  />
+                </svg>
+                Leader Summer 2024
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional: Add mobile menu script here or in separate file -->
+    <script src="scripts/main.js"></script>
   </body>
 </html>
