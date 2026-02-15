@@ -401,29 +401,29 @@ img {
 
 .ourPromise-content {
   padding-top: 80px;
-  width: 944px;
+  max-width: 944px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 50px;
 }
-.ourpromise-left {
+.ourpromise-left,
+.ourpromise-right {
   width: 50%;
 }
 .ourpromise-left p {
   color: var(--text-muted);
   margin-bottom: var(--spacing-lg);
 }
-.ourpromise-right {
-  width: 50%;
-  text-align: center;
-}
+
 .ourpromise-right img {
   border-radius: 16px;
-  display: inline-block;
-  text-align: right;
+  max-width: 100%;
+  height: auto;
 }
+/* Award Section */
 
 .awardSection-content {
   padding-top: 100px;
@@ -453,22 +453,31 @@ img {
   flex-direction: column;
   gap: var(--spacing-sm);
   border-radius: var(--border-md);
+  transition: var(--transition-base);
 }
-
-.list2 {
+.awards:nth-child(1) {
+  background-color: var(--awards-color1);
+}
+.awards:nth-child(2) {
   background-color: var(--awards-color2);
 }
-.list3 {
+.awards:nth-child(3) {
   background-color: var(--awards-color3);
 }
-.list4 {
+.awards:nth-child(4) {
   background-color: var(--awards-color4);
 }
-.list5 {
+.awards:nth-child(5) {
   background-color: var(--awards-color5);
 }
-.list6 {
+.awards:nth-child(6) {
   background-color: var(--awards-color6);
+}
+
+.awards:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
 }
 .awardsList img {
   display: inline-block;
