@@ -24,6 +24,13 @@
   --text-muted: #878787;
   --border-color: #e5e5e5;
 
+  --awards-color1: #fff5f3;
+  --awards-color2: #fff0f9;
+  --awards-color3: #ecffff;
+  --awards-color4: #f6f4ff;
+  --awards-color5: #fff9e7;
+  --awards-color6: #ffede4;
+
   /* Spacing */
   --spacing-xs: 8px;
   --spacing-sm: 15px;
@@ -45,6 +52,11 @@
   --font-size-xl: 44px;
   --line-height-tight: 1.25;
   --line-height-base: 1.6;
+
+  /* Border Radius */
+  --border--sm: 5px;
+  --border-md: 8px;
+  --border-base: 16px;
 
   /* Transitions */
   --transition-base: 0.3s ease;
@@ -194,7 +206,7 @@ img {
   width: 0%;
   height: 2px;
   background-color: var(--primary-color);
-  transition: width var(--transition-base);
+  transition: var(--transition-base);
 }
 
 .nav-list a:not(.btn):hover::after {
@@ -313,7 +325,7 @@ img {
 .section-title {
   font-size: var(--font-size-lg);
   font-weight: 500;
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
   max-width: 800px;
 }
 
@@ -342,27 +354,26 @@ img {
 .logo-item img {
   max-height: 40px;
   width: auto;
-  opacity: 0.6;
+  opacity: 1;
   transition: opacity var(--transition-base);
-  filter: grayscale(100%);
 }
 
 .logo-item:hover img {
-  opacity: 1;
-  filter: grayscale(0%);
+  opacity: 0.6;
+  filter: grayscale(100%);
 }
 
 /* ==========================================================================
    Trust Indicators
    ========================================================================== */
 
-.trust-indicators {
-  margin-top: var(--spacing-lg);
-}
+/* .trust-indicators {
+  margin-top: var(--spacing-sm);
+} */
 
 .trust-indicators ul {
   display: flex;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-sm);
   list-style: none;
   flex-wrap: wrap;
   justify-content: center;
@@ -375,14 +386,100 @@ img {
   gap: var(--spacing-xs);
   font-size: var(--font-size-sm);
   color: var(--text-muted);
-  padding: var(--spacing-xs) var(--spacing-sm);
+  padding: var(--spacing-sm);
 }
 
 .trust-indicators svg {
   color: var(--primary-color);
   flex-shrink: 0;
 }
+/* /* ==========================================================================
+   Our Promise section
+   ========================================================================== */
 
+/* */
+
+.ourPromise-content {
+  padding-top: 80px;
+  width: 944px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.ourpromise-left {
+  width: 50%;
+}
+.ourpromise-left p {
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-lg);
+}
+.ourpromise-right {
+  width: 50%;
+  text-align: center;
+}
+.ourpromise-right img {
+  border-radius: 16px;
+  display: inline-block;
+  text-align: right;
+}
+
+.awardSection-content {
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .awardSection-content h2 {
+  text-align: center;
+} */
+.awardsList {
+  display: grid;
+  grid-template-columns: repeat(3, 260px);
+  align-items: center;
+  justify-items: center;
+  gap: var(--spacing-xl);
+  justify-content: center;
+}
+.awards {
+  width: 260px;
+  height: 260px;
+  background-color: var(--awards-color1);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  border-radius: var(--border-md);
+}
+
+.list2 {
+  background-color: var(--awards-color2);
+}
+.list3 {
+  background-color: var(--awards-color3);
+}
+.list4 {
+  background-color: var(--awards-color4);
+}
+.list5 {
+  background-color: var(--awards-color5);
+}
+.list6 {
+  background-color: var(--awards-color6);
+}
+.awardsList img {
+  display: inline-block;
+}
+.awards-subtitle {
+  font-size: var(--font-size-base);
+  font-weight: bold;
+  width: 170px;
+  line-height: var(--line-height-tight);
+  text-align: center;
+}
 /* ==========================================================================
    Responsive Design
    ========================================================================== */
