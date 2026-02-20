@@ -367,10 +367,6 @@ img {
    Trust Indicators
    ========================================================================== */
 
-/* .trust-indicators {
-  margin-top: var(--spacing-sm);
-} */
-
 .trust-indicators ul {
   display: flex;
   gap: var(--spacing-sm);
@@ -393,11 +389,10 @@ img {
   color: var(--primary-color);
   flex-shrink: 0;
 }
-/* /* ==========================================================================
+
+/* ==========================================================================
    Our Promise section
    ========================================================================== */
-
-/* */
 
 .ourPromise-content {
   padding-top: 80px;
@@ -409,10 +404,12 @@ img {
   justify-content: center;
   gap: 50px;
 }
+
 .ourpromise-left,
 .ourpromise-right {
   width: 50%;
 }
+
 .ourpromise-left p {
   color: var(--text-muted);
   margin-bottom: var(--spacing-lg);
@@ -423,7 +420,10 @@ img {
   max-width: 100%;
   height: auto;
 }
-/* Award Section */
+
+/* ==========================================================================
+   Award Section
+   ========================================================================== */
 
 .awardSection-content {
   padding-top: 100px;
@@ -431,9 +431,7 @@ img {
   align-items: center;
   justify-content: center;
 }
-/* .awardSection-content h2 {
-  text-align: center;
-} */
+
 .awardsList {
   display: grid;
   grid-template-columns: repeat(3, 260px);
@@ -442,6 +440,7 @@ img {
   gap: var(--spacing-xl);
   justify-content: center;
 }
+
 .awards {
   width: 260px;
   height: 260px;
@@ -455,21 +454,27 @@ img {
   border-radius: var(--border-md);
   transition: var(--transition-base);
 }
+
 .awards:nth-child(1) {
   background-color: var(--awards-color1);
 }
+
 .awards:nth-child(2) {
   background-color: var(--awards-color2);
 }
+
 .awards:nth-child(3) {
   background-color: var(--awards-color3);
 }
+
 .awards:nth-child(4) {
   background-color: var(--awards-color4);
 }
+
 .awards:nth-child(5) {
   background-color: var(--awards-color5);
 }
+
 .awards:nth-child(6) {
   background-color: var(--awards-color6);
 }
@@ -477,11 +482,13 @@ img {
 .awards:hover {
   transform: translateY(-5px);
   cursor: pointer;
-  box-shadow: var(--sha);
+  box-shadow: var(--shadow-lg);
 }
+
 .awardsList img {
   display: inline-block;
 }
+
 .awards-subtitle {
   font-size: var(--font-size-base);
   font-weight: bold;
@@ -489,171 +496,18 @@ img {
   line-height: var(--line-height-tight);
   text-align: center;
 }
-/* ==========================================================================
-   Attributes sections==================================================
-   \ */
-
-.attributes_sec_content {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  padding-top: 80px;
-}
-.btn-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Base Button Styling */
-.btn-list button {
-  background-color: transparent;
-  border-style: none;
-  border-bottom: 2px solid transparent;
-  color: var(--text-muted);
-  font-family: inherit;
-  font-size: var(--font-size-base);
-  cursor: pointer;
-  width: 200px;
-  padding: 10px 0;
-
-  /* Flexbox ensures the icon and text align perfectly */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-/* Common Icon Styling */
-.btn-list button::before {
-  font-size: 30px;
-  padding-right: 8px;
-  line-height: 1; /* Prevents icon from adding extra height */
-}
-
-/* Specific Icons (Unicode) */
-.btn-list button:nth-child(1)::before {
-  content: "\15fd";
-} /* Reach */
-.btn-list button:nth-child(2)::before {
-  content: "\15dC";
-} /* Distribute */
-.btn-list button:nth-child(3)::before {
-  content: "\15dF";
-} /* Analytics */
-.btn-list button:nth-child(4)::before {
-  content: "\154F";
-} /* Settings/Other */
-
-/* Hover State for better UX */
-.btn-list button:hover {
-  color: var(--text-main); /* Replace with your primary text color variable */
-  border-bottom: 2px solid var(--primary-color);
-}
-.btn-list button:active {
-  color: var(--primary-hover);
-  border-bottom: 2px solid var(--primary-color);
-}
-.btn-list button:hover {
-  color: var(--primary-color);
-  border-bottom: 2px solid var(--primary-color);
-}
-.tab-btn.active {
-  color: var(--primary-hover);
-  border-bottom: 2px solid var(--primary-color);
-}
-
-/* #tab1Content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 40px;
-  border-radius: 16px;
-}
-
-#tab1Content {
-  background-color: #878787;
-}
-#tab2Content,
-#tab3Content,
-#tab4Content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-  border-radius: 16px;
-  background-color: #0aa8b3;
-}
-
-.tab-content-left > * + * {
-  margin-top: 0.7rem;
-}*/
-.tab-content-left,
-.tab-content-right {
-  width: 50%;
-}
-
-.tab-content-right {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
-.tab-content-right img {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 16px;
-}
-
-/* *********************************************************
-
-
-*/
-
-/* General Tab Content Styling */
-
-.tab-content {
-  display: none; /* Hide by default */
-  justify-content: center;
-  align-items: center;
-  padding: 60px;
-  border-radius: 16px;
-  gap: 50px;
-}
-
-/* The Fix: Show the content when the active class is added */
-.tab-content.active {
-  display: flex !important;
-}
-
-/* Background Colors */
-
-#tab2Content,
-#tab4Content,
-#tab3Content,
-#tab1Content {
-  background-color: var(--background-light);
-}
-
-.tab-content-left > * + * {
-  margin-top: 0.7rem;
-}
-.tab-content-left,
-.tab-content-right {
-  width: 50%;
-  gap: 20px;
-}
 
 /* ==========================================================================
    Responsive Design
    ========================================================================== */
 
-/* Large Tablets & Small Desktops */
+/* Large Tablets & Small Desktops (1024px and below) */
 @media (max-width: 1024px) {
   :root {
     --font-size-xl: 36px;
+    --font-size-lg: 28px;
+    --spacing-3xl: 60px;
+    --spacing-4xl: 100px;
   }
 
   .hero-content h1 {
@@ -662,11 +516,43 @@ img {
 
   .customers-logos {
     grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  /* Our Promise Section */
+  .ourPromise-content {
+    padding-top: 60px;
+    gap: 40px;
+    max-width: 90%;
+  }
+
+  /* Awards Section */
+  .awardSection-content {
+    padding-top: 80px;
+  }
+
+  .awardsList {
+    grid-template-columns: repeat(3, 240px);
+    gap: var(--spacing-lg);
+  }
+
+  .awards {
+    width: 240px;
+    height: 240px;
   }
 }
 
-/* Tablets */
+/* Tablets (768px and below) */
 @media (max-width: 768px) {
+  :root {
+    --font-size-xl: 32px;
+    --font-size-lg: 26px;
+    --spacing-3xl: 50px;
+    --spacing-4xl: 60px;
+    --container-padding: 20px;
+  }
+
+  /* Navigation */
   .main-nav {
     flex-wrap: wrap;
   }
@@ -697,16 +583,18 @@ img {
     order: 2;
   }
 
-  :root {
-    --font-size-xl: 32px;
-    --spacing-4xl: 60px;
-  }
-
+  /* Hero Section */
   .hero-content h1,
   .hero-content p {
     max-width: 100%;
   }
 
+  .hero-image {
+    margin-top: 40px;
+    margin-bottom: -50px;
+  }
+
+  /* Customers Section */
   .customers-logos {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-lg);
@@ -716,39 +604,187 @@ img {
     flex-direction: column;
     gap: var(--spacing-sm);
   }
-}
 
-/* Mobile */
-@media (max-width: 480px) {
-  :root {
-    --font-size-xl: 26px;
-    --font-size-lg: 24px;
-    --spacing-4xl: 40px;
+  /* Our Promise Section */
+  .ourPromise-content {
+    flex-direction: column;
+    padding-top: 50px;
+    gap: 30px;
   }
 
+  .ourpromise-left,
+  .ourpromise-right {
+    width: 100%;
+  }
+
+  .ourpromise-left {
+    text-align: center;
+  }
+
+  /* Awards Section */
+  .awardSection-content {
+    padding-top: 60px;
+  }
+
+  .awardsList {
+    grid-template-columns: repeat(2, 220px);
+    gap: var(--spacing-md);
+  }
+
+  .awards {
+    width: 220px;
+    height: 220px;
+  }
+
+  .awards-subtitle {
+    font-size: var(--font-size-sm);
+    width: 150px;
+  }
+}
+
+/* ********************************** */
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  :root {
+    --font-size-xl: 28px;
+    --font-size-lg: 22px;
+    --font-size-base: 15px;
+    --spacing-3xl: 40px;
+    --spacing-4xl: 40px;
+    --spacing-xl: 30px;
+    --spacing-lg: 20px;
+    --container-padding: 15px;
+  }
+
+  /* Buttons */
   .btn {
     padding: 10px var(--spacing-md);
     font-size: var(--font-size-sm);
   }
 
+  .btn-primary {
+    padding: 12px 20px;
+  }
+
+  /* Navigation */
   .nav-list ul {
     gap: var(--spacing-sm);
   }
 
+  .nav-list a {
+    font-size: 13px;
+  }
+
+  /* Hero Section */
   .hero-section {
-    padding: var(--spacing-lg) 0 0;
+    padding: var(--spacing-xl) 0 0;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .hero-content p {
+    font-size: 14px;
+    margin-bottom: var(--spacing-md);
   }
 
   .hero-image {
-    margin-bottom: -40px;
+    margin-top: 30px;
+    margin-bottom: -30px;
+  }
+
+  /* Customers Section */
+  .our-customers {
+    padding: var(--spacing-3xl) 0 var(--spacing-xl);
+  }
+
+  .section-title {
+    font-size: 22px;
   }
 
   .customers-logos {
     grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .logo-item {
+    padding: var(--spacing-sm);
   }
 
   .logo-item img {
     max-height: 35px;
+  }
+
+  .trust-indicators li {
+    font-size: 13px;
+    padding: var(--spacing-xs);
+  }
+
+  /* Our Promise Section */
+  .ourPromise-content {
+    padding-top: 40px;
+    gap: 25px;
+  }
+
+  .ourpromise-left p {
+    font-size: 14px;
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Awards Section */
+  .awardSection-content {
+    padding-top: 40px;
+  }
+
+  .awardsList {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .awards {
+    width: 100%;
+    max-width: 300px;
+    height: 220px;
+    margin: 0 auto;
+  }
+
+  .awards-subtitle {
+    font-size: var(--font-size-sm);
+    width: auto;
+    max-width: 180px;
+  }
+}
+
+/* Extra Small Mobile (360px and below) */
+@media (max-width: 360px) {
+  :root {
+    --font-size-xl: 24px;
+    --font-size-lg: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .awards {
+    height: 200px;
+    max-width: 280px;
+  }
+
+  .btn {
+    padding: 8px var(--spacing-sm);
+    font-size: 13px;
+  }
+
+  .btn-primary {
+    padding: 10px 16px;
   }
 }
 
